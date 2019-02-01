@@ -105,7 +105,30 @@
     <section class="search-hotels-form">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <!--здесь кнопка и форма будет-->
+      <button type="button">Поиск гостиницы в Седоне</button>
+      <!--Если эта кнопка ведет к форме - это ссылка? Или все-таки кнопка, так как ведет только на форму?-->
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend class="visually-hidden">Форма поиска гостиниц в Седоне</legend>
+          <p>
+            <label for="form-main-input-data-arrival">Дата заезда</label>
+            <input type="date" name="date-arrival" id="form-main-input-data-arrival" placeholder="24 апреля 2017">
+          </p>
+          <p>
+            <label for="form-main-input-data-departure">Дата выезда</label>
+            <input type="date" name="date-departure" id="form-main-input-data-departure" placeholder="4 июля 2017">
+          </p>
+          <p>
+            <label for="form-main-input-number-mans">Взрослые:</label>
+            <input type="number" id="form-main-input-number-mans" name="number-mans" min="0">
+          </p>
+          <p>
+            <label for="form-main-input-number-childs">Дети:</label>
+            <input type="number" id="form-main-input-number-childs" name="number-childs" min="0">
+          </p>
+          <button type="submit">Найти</button>
+        </fieldset>
+      </form>
     </section>
     <section class="map-hotels">
       <!--Здесь размещена карта-->
