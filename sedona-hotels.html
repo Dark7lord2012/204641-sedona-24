@@ -24,37 +24,62 @@
     <h1 class="visually-hidden">Гостиницы</h1>
 
     <section class="filters">
-
       <h2 class="visually-hidden">Фильтры сортировки по выбору гостиниц</h2>
-      <!--Здесь будут форма и фильтры-->
 
-      <div class="filters-infrastructure">
-        <h3>Инфраструктура</h3>
-        <!--По макету тут будут чекбоксы-->
-        <ul class="filters-infrasructure-checkbox">
-          <li>Бассейн</li>
-          <li>Парковка</li>
-          <li>Wi-Fi</li>
-        </ul>
-      </div>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filters-infrastructure">
+          <legend>Инфраструктура</legend>
+          <!--По макету тут будут чекбоксы-->
+          <label>
+            <input type="checkbox">
+            Бассейн
+          </label>
+          <label>
+            <input type="checkbox">
+            Парковка
+          </label>
+          <label>
+            <input type="checkbox">
+            Wi-Fi
+          </label>
+        </fieldset>
 
-      <div class="filters-type-of-house">
-        <h3>Тип жилья</h3>
-        <!--По макету тут будут чекбоксы-->
-        <ul class="filters-type-of-house-checkbox">
-          <li>Гостиница</li>
-          <li>Мотель</li>
-          <li>Апартаменты</li>
-        </ul>
-      </div>
+        <fieldset class="filters-type-of-house">
+          <legend>Тип жилья</legend>
+          <label>
+            <input type="checkbox">
+            Гостиница
+          </label>
+          <label>
+            <input type="checkbox">
+            Мотель
+          </label>
+          <label>
+            <input type="checkbox">
+            Апартаменты
+          </label>
+        </fieldset>
 
-      <div class="filters-price-per-day">
-        <h3>Стоимость в сутки (р.)</h3>
-        <!--По макету тут будут 2 поля ввода и линия диапазона-->
-        <p>От 0</p>
-        <p>До 3000</p>
-        <!--И кнопка-->
-      </div>
+        <fieldset class="filters-price-per-day">
+          <legend>Стоимость в сутки (р.)</legend>
+          <!--По макету тут будут 2 поля ввода и линия диапазона-->
+          <p>
+            <label>
+              Минимальная цена для гостиниц
+              <input name="filters-min-price" type="text" placeholder="от 0" value="от 0">
+            </label>
+          </p>
+          <p>
+            <label>
+              Максимальная цена за гостиницу
+              <input name="filters-max-price" type="text" placeholder="до 3000р" value="до 3000">
+            </label>
+          </p>
+          <input name="filters-range-price" type="range" min="0">
+          <!--И кнопка-->
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
 
     </section>
 
@@ -63,22 +88,21 @@
       <section class="filter-sort">
         <h3>Найдено: 3</h3>
         <p>Сортировка:</p>
-        <ul class="filters-sort-type"> <!--возможно, что придется изменять в будущем на button? span? После прохождения форм?-->
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По рейтингу</li>
+        <ul class="filters-sort-type">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
         </ul>
-        <ul class="filters-sort-order"> <!--Слова в будущем поменяются на стрелки, по ТЗ по прежнему нельзя верстать формы-->
-          <li>По возрастанию</li>
-          <li>По убыванию</li>
+        <ul class="filters-sort-order">
+          <li><a href="#">По возрастанию</a></li>
+          <li><a href="#">По убыванию</a></li>
         </ul>
       </section>
 
       <ul class="hotels-items">
         <li>
-
           <div class="hotel-item-image">
-            <img  class="hotel-item-image-1" src="img/hotel-1-amara-resort.jpg" alt="Фото отеля - 1" width="135" height="90">
+            <img class="hotel-item-image-1" src="img/hotel-1-amara-resort.jpg" alt="Фото отеля - 1" width="135" height="90">
           </div>
 
           <div class="hotel-item-info">
@@ -97,7 +121,7 @@
 
         <li>
           <div class="hotel-item-image">
-            <img class="hotel-item-image-2" src="img/hotel-2-desert-quail.jpg" alt="Фото отеля - 2" width="135" height="90" >
+            <img class="hotel-item-image-2" src="img/hotel-2-desert-quail.jpg" alt="Фото отеля - 2" width="135" height="90">
           </div>
 
           <div class="hotel-item-info">
