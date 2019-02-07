@@ -226,3 +226,11 @@ ul.hotels-items {
 
   background-color: #503e33;
 }
+
+.hotel-item-rate span{
+  line-height: 21px;
+  font-weight: 400;
+  color: #666666;
+
+  background-color: #f2f2f2;
+}
