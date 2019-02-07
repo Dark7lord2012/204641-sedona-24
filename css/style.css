@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Навигация */
+
+.main-nav {
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation a.current-page {
+  color: #766357;
+}
+/* Промо на главной странице */
+.promo {
+  text-align: center;
+}
+
+.promo p:first-child {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.promo p:last-child {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+}
+
+/* Тут разметка необязательной части ТЗ, но если верстать, то пусть стили будут опианы по порядку следования для будущего удобства */
+
+/*Кнопка и форма поиска гостиницы на главной*/
+
+.search-hotels-form{
+  text-align: center;
+}
+
+.search-hotels-form h2{
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.search-hotels-form h2 + p{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.search-hotels-form .button-search {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #766357;
+  border: none;
+}
+
+.search-hotels-form .button-search:hover,
+.search-hotels-form .button-search:focus {
+  background-color: #604e43;
+}
+
+.search-hotels-form .button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.search-hotels-form fieldset {
+  border: none;
+}
+
+.search-hotels-form form input{
+  font: inherit;
+
+  background-color: #f2f2f2;
+}
+
+.search-hotels-form form input:hover{
+  background-color: #ebebeb;
+}
+
+.search-hotels-form form input:focus{
+  background-color: #ffffff;
+}
+
+.search-hotels-form .button-submit {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  border: none;
+}
+
+.search-hotels-form .button-submit:hover {
+  background-color: #669ec0;
+}
+
+.search-hotels-form .button-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+/* Футер */
+
+.main-footer p:first-child {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.social-links {
+  list-style: none;
+}
+
+.social-links a{
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.social-links a:hover {
+  background-color: #669ec0;
+}
+
+.social-links a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.main-footer p:last-child {
+  font-weight: 400;
+}
+
+/*Тут оставлено место для стилизации фильтров*/
+
+/*Список гостиниц на странице гостиниц*/
+
+ul.hotels-items {
+  list-style: none;
+}
+
+.hotel-items h3 {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotel-items p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.hotel-item-info a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.hotel-item-info a:first-of-type {
+  background-color: #81b3d2;
+}
+
+.hotel-item-info a:first-of-type:hover{
+  background-color: #669ec0;
+}
+
+.hotel-item-info a:first-of-type:active{
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.hotel-item-info a:last-of-type {
+  background-color: #766357;
+}
+
+.hotel-item-info a:last-of-type:hover{
+  background-color: #604e43;
+}
+
+.hotel-item-info a:last-of-type:active{
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
