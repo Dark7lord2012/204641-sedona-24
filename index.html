@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона - Главная</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -105,7 +109,7 @@
     <section class="search-hotels-form">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button type="button">Поиск гостиницы в Седоне</button>
+      <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
       <!--Если эта кнопка ведет к форме - это ссылка? Или все-таки кнопка, так как ведет только на форму?-->
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
@@ -113,7 +117,7 @@
           <p>
             <label>
               Дата заезда
-              <input type="date" name="date-arrival" placeholder="24 апреля 2017">
+              <input type="date" name="date-arrival" placeholder="24 апреля 2017" >
             </label>
           </p>
           <p>
@@ -132,7 +136,7 @@
               <input type="number" name="number-childs" min="0">
             </label>
           </p>
-          <button type="submit">Найти</button>
+          <button class="button-submit" type="submit">Найти</button>
         </fieldset>
       </form>
     </section>
