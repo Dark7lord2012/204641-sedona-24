@@ -4,7 +4,7 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: bold;
   color: #000000;
   text-transform: uppercase;
 
@@ -42,9 +42,10 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation a.current-page {
+.site-navigation current-page {
   color: #766357;
 }
+
 /* Промо на главной странице */
 .promo {
   text-align: center;
@@ -66,16 +67,16 @@ a {
 
 /*Кнопка и форма поиска гостиницы на главной*/
 
-.search-hotels-form{
+.search-hotels-form {
   text-align: center;
 }
 
-.search-hotels-form h2{
+.search-hotels-form h2 {
   font-size: 30px;
   line-height: 36px;
 }
 
-.search-hotels-form h2 + p{
+.search-hotels-form h2 + p {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -100,7 +101,6 @@ a {
 
 .search-hotels-form .button-search:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #503e33;
 }
 
@@ -108,17 +108,16 @@ a {
   border: none;
 }
 
-.search-hotels-form form input{
+.search-hotels-form input {
   font: inherit;
-
   background-color: #f2f2f2;
 }
 
-.search-hotels-form form input:hover{
+.search-hotels-form input:hover {
   background-color: #ebebeb;
 }
 
-.search-hotels-form form input:focus{
+.search-hotels-form input:focus {
   background-color: #ffffff;
 }
 
@@ -139,7 +138,6 @@ a {
 
 .search-hotels-form .button-submit:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #5496bd;
 }
 
@@ -154,9 +152,8 @@ a {
   list-style: none;
 }
 
-.social-links a{
+.social-links a {
   color: #ffffff;
-
   background-color: #81b3d2;
 }
 
@@ -177,7 +174,7 @@ a {
 
 /*Список гостиниц на странице гостиниц*/
 
-ul.hotels-items {
+.hotels-items {
   list-style: none;
 }
 
@@ -203,13 +200,12 @@ ul.hotels-items {
   background-color: #81b3d2;
 }
 
-.hotel-item-info a:first-of-type:hover{
+.hotel-item-info a:first-of-type:hover {
   background-color: #669ec0;
 }
 
-.hotel-item-info a:first-of-type:active{
+.hotel-item-info a:first-of-type:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #5496bd;
 }
 
@@ -217,17 +213,16 @@ ul.hotels-items {
   background-color: #766357;
 }
 
-.hotel-item-info a:last-of-type:hover{
+.hotel-item-info a:last-of-type:hover {
   background-color: #604e43;
 }
 
-.hotel-item-info a:last-of-type:active{
+.hotel-item-info a:last-of-type:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #503e33;
 }
 
-.hotel-item-rate span{
+.hotel-item-rate span {
   line-height: 21px;
   font-weight: 400;
   color: #666666;
