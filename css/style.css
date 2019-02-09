@@ -62,6 +62,39 @@ a {
 
 /* Тут разметка необязательной части ТЗ, но если верстать, то пусть стили будут опианы по порядку следования для будущего удобства */
 
+.feature h3 {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.feature span,
+.feature p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+}
+
+.feature-text {
+  background-color: #81b3d2;
+  text-align: center;
+}
+.feature-text h3,
+.feature-text span,
+.feature-text p{
+  color: #ffffff;
+}
+
+.list-features {
+  list-style: none;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+.list-features span {
+  color: #333333;
+}
 /*Кнопка и форма поиска гостиницы на главной*/
 
 .search-hotels-form {
