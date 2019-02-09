@@ -30,71 +30,84 @@
       <h2 class="visually-hidden">Фильтры сортировки по выбору гостиниц</h2>
 
       <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="filters-infrastructure">
-          <legend>Инфраструктура</legend>
-          <label class="filters">
-            <input type="checkbox" name="">
-            Бассейн
-          </label>
-          <label class="filters">
-            <input type="checkbox">
-            Парковка
-          </label>
-          <label class="filters">
-            <input type="checkbox">
-            Wi-Fi
-          </label>
-        </fieldset>
+        <div class="select-filters">
+          <fieldset class="filters-infrastructure">
+            <legend>Инфраструктура</legend>
+            <p>
+              <label class="filters">
+                <input type="checkbox" name="">
+                Бассейн
+              </label>
+            </p>
+            <p>
+              <label class="filters">
+                <input type="checkbox">
+                Парковка
+              </label>
+            </p>
+            <p>
+              <label class="filters">
+                <input type="checkbox">
+                Wi-Fi
+              </label>
+            </p>
+          </fieldset>
 
-        <fieldset class="filters-type-of-house">
-          <legend>Тип жилья</legend>
-          <label class="filters">
-            <input type="checkbox">
-            Гостиница
-          </label>
-          <label class="filters">
-            <input type="checkbox">
-            Мотель
-          </label>
-          <label class="filters">
-            <input type="checkbox">
-            Апартаменты
-          </label>
-        </fieldset>
+          <fieldset class="filters-type-of-house">
+            <legend>Тип жилья</legend>
+            <p>
+              <label class="filters">
+                <input type="checkbox">
+                Гостиница
+              </label>
+            </p>
+            <p>
+              <label class="filters">
+                <input type="checkbox">
+                Мотель
+              </label>
+            </p>
+            <p>
+              <label class="filters">
+                <input type="checkbox">
+                Апартаменты
+              </label>
+            </p>
+          </fieldset>
 
-        <fieldset class="filters-price-per-day">
-          <legend>Стоимость в сутки (р.)</legend>
-          <!--По макету тут будут 2 поля ввода и шкала дипазона, который быдет сверстан кастомно позже-->
-          <p>
-            <label class="filters">
-              Минимальная цена для гостиницы
-              <input name="filters-min-price" type="text" placeholder="от 0" value="от 0">
-            </label>
-          </p>
-          <p>
-            <label class="filters">
-              Максимальная цена за гостиницу
-              <input name="filters-max-price" type="text" placeholder="до 3000р" value="до 3000">
-            </label>
-          </p>
-            <!-- Тут должна быть шкала с 2 активными контролами-->
-        </fieldset>
-        <button class="button" type="submit">Показать</button>
+          <fieldset class="filters-price-per-day">
+            <legend>Стоимость в сутки (р.)</legend>
+            <!--По макету тут будут 2 поля ввода и шкала дипазона, который быдет сверстан кастомно позже-->
+            <p>
+              <label class="filters">
+                Минимальная цена для гостиницы
+                <input name="filters-min-price" type="text" placeholder="от 0" value="от 0">
+              </label>
+            </p>
+            <p>
+              <label class="filters">
+                Максимальная цена за гостиницу
+                <input name="filters-max-price" type="text" placeholder="до 3000р" value="до 3000">
+              </label>
+            </p>
+              <!-- Тут должна быть шкала с 2 активными контролами-->
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </div>
       <fieldset class="filter-sort">
         <legend>Найдено: 3</legend>
         <p>Сортировка:</p>
         <ul class="filters-sort-type">
-          <li>По цене</li>
+          <li class="active">По цене</li>
           <li>По типу</li>
           <li>По рейтингу</li>
         </ul>
         <ul class="filters-sort-order">
           <li>По возрастанию</li>
-          <li>По убыванию</li>
+          <li class="active">По убыванию</li>
         </ul>
       </fieldset>
       </form>
-
     </section>
 
     <section class="hotel-items">

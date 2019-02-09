@@ -198,7 +198,88 @@ a {
   font-weight: 400;
 }
 
-/*Тут оставлено место для стилизации фильтров*/
+/* Стилизации фильтров на внутренней странице*/
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+
+}
+
+.select-filters {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #30626b;
+}
+
+
+
+.filters button,
+.filters input{
+  font: inherit;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.filters button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.filter-sort legend {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.filter-sort p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.filter-sort ul {
+  list-style: none;
+}
+
+.filters-sort-type li {
+  border-bottom: 1px dotted #81b3d2;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filters-sort-type li:hover {
+  color: #81b3d2;
+}
+
+.filters-sort-type .active {
+  color: #81b3d2;
+  border: none;
+}
+
+.filters-sort-type li:active {
+  border: none;
+  color: #000000;
+}
+
+.filters-sort-order {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filters-sort-order .active{
+  color: #81b3d2;
+}
 
 /*Список гостиниц на странице гостиниц*/
 
