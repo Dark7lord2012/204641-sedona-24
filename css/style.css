@@ -80,9 +80,10 @@ a {
   background-color: #81b3d2;
   text-align: center;
 }
+
 .feature-text h3,
 .feature-text span,
-.feature-text p{
+.feature-text p {
   color: #ffffff;
 }
 
@@ -95,6 +96,7 @@ a {
 .list-features span {
   color: #333333;
 }
+
 /*Кнопка и форма поиска гостиницы на главной*/
 
 .search-hotels-form {
@@ -208,11 +210,9 @@ a {
   font-size: 16px;
   line-height: 21px;
   font-weight: bold;
-
 }
 
 .select-filters {
-  font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   color: #ffffff;
@@ -222,11 +222,9 @@ a {
 
 
 .filters button,
-.filters input{
+.filters input {
   font: inherit;
   border: 2px solid #ffffff;
-  font-size: 14px;
-  line-height: 21px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: transparent;
@@ -277,7 +275,7 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.filters-sort-order .active{
+.filters-sort-order .active {
   color: #81b3d2;
 }
 
