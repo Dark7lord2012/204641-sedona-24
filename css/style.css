@@ -261,6 +261,12 @@ a {
 
 .filters fieldset {
   border: none;
+  margin-right: 115px;
+}
+
+.filters fieldset:nth-child(3){
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .filters legend {
@@ -270,13 +276,14 @@ a {
 }
 
 .select-filters {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 70px;
   line-height: 21px;
   font-weight: normal;
   color: #ffffff;
   background-color: #30626b;
 }
-
-
 
 .filters button,
 .filters input {
@@ -342,6 +349,17 @@ a {
   list-style: none;
 }
 
+.hotels-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 70px;
+  align-items: center; /* Тут не знаю как выровнять картинку и текст в одну линию */
+}
+
+.hotel-item-image {
+  margin-right: 30px;
+}
+
 .hotel-items h3 {
   font-size: 21px;
   line-height: 26px;
@@ -384,6 +402,10 @@ a {
 .hotel-item-info a:last-of-type:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
+}
+
+.hotel-item-rate {
+  margin-left: auto;
 }
 
 .hotel-item-rate span {
