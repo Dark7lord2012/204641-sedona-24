@@ -11,16 +11,20 @@
 
 <body>
   <header class="main-header">
-    <nav class="main-nav">
-      <a href="index.html" class="main-header-logo"><img src="img/logo.svg" alt="Главный логотип гостиницы Седона" width="140" height="72"></a>
+    <div class="container">
+      <nav class="main-nav">
+        <a href="index.html" class="main-header-logo"><img src="img/logo.svg" alt="Главный логотип гостиницы Седона" width="140" height="72"></a>
 
-      <ul class="site-navigation">
-        <li><a href="sedona-info.html">Информация</a></li>
-        <li><a href="sedona-photo-video.html">Фото и видео</a></li>
-        <li><a href="sedona-map.html">Карта штата</a></li>
-        <li><a href="sedona-hotels.html">Гостиницы</a></li>
-      </ul>
-    </nav>
+        <ul class="site-navigation">
+          <li><a href="sedona-info.html">Информация</a></li>
+          <li><a href="sedona-photo-video.html">Фото и видео</a></li>
+        </ul>
+        <ul class="site-navigation">
+          <li><a href="sedona-map.html">Карта штата</a></li>
+          <li><a href="sedona-hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
@@ -110,13 +114,13 @@
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
       <!--Если эта кнопка ведет к форме - это ссылка? Или все-таки кнопка, так как ведет только на форму?-->
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="search-hotels" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <legend class="visually-hidden">Форма поиска гостиниц в Седоне</legend>
           <p>
             <label>
               Дата заезда
-              <input type="date" name="date-arrival" placeholder="24 апреля 2017" >
+              <input type="date" name="date-arrival" placeholder="24 апреля 2017">
             </label>
           </p>
           <p>
@@ -145,14 +149,16 @@
   </main>
 
   <footer class="main-footer">
-    <p>#VISITSEDONA</p>
-    <ul class="social-links">
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Youtube</a></li>
-    </ul>
+    <div class="container">
+      <p>#VISITSEDONA</p>
+      <ul class="social-links">
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Youtube</a></li>
+      </ul>
 
-    <p>Website by <a href="www.htmlacademy.ru">HTML Academy</a></p>
+      <p>Website by <a href="www.htmlacademy.ru">HTML Academy</a></p>
+    </div>
   </footer>
 </body>
 
