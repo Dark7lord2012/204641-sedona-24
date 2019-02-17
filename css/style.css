@@ -14,6 +14,29 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Навигация */
 
 .main-nav {
@@ -30,19 +53,19 @@ a {
 .main-nav .main-header-logo {
   position: absolute;
   left: 50%;
-  margin-left: -70px;
+  transform: translate(-50%);
 }
 
 .site-navigation {
   display: flex;
   list-style: none;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 
 .site-navigation li {
-  width: 240px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -50,6 +73,14 @@ a {
 
 .site-navigation a {
   color: #000000;
+}
+
+.site-navigation a:first-child {
+  margin-left: 72px;
+}
+
+.site-navigation a:last-child {
+  margin-right: 72px;
 }
 
 .site-navigation a:hover,
@@ -75,8 +106,17 @@ a {
 
 /* Промо на главной странице */
 .promo {
-  padding-top: 590px;
+  display: flex;
+  justify-content: flex-end; /* Немного не понял про флексы, сделал как-то так */
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 745px;
   text-align: center;
+}
+
+.promo p{
+  display: block;
+  width: 100%;
 }
 
 .promo p:first-child {
@@ -154,7 +194,9 @@ a {
 }
 
 .search-hotels-form .button-search {
-  padding: 30px 140px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 570px;
   font: inherit;
   font-size: 21px;
   line-height: 26px;
@@ -220,13 +262,10 @@ a {
 
 /* Футер */
 
-.main-footer {
-  min-height: 120px;
-}
-
 .main-footer .container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .main-footer p:first-child {
@@ -264,7 +303,7 @@ a {
   margin-right: 115px;
 }
 
-.filters fieldset:nth-child(3){
+.filters fieldset:last-child {
   margin-left: auto;
   margin-right: 0;
 }
@@ -347,6 +386,7 @@ a {
 
 .hotels-items {
   list-style: none;
+  margin: 0;
 }
 
 .hotels-items li {
