@@ -23,10 +23,7 @@ input[type="radio"].visually-hidden {
   height: 1px;
   margin: -1px;
   border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
+  padding: 0 white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -107,14 +104,14 @@ img {
 /* Промо на главной странице */
 .promo {
   display: flex;
-  justify-content: flex-end; /* Немного не понял про флексы, сделал как-то так */
+  justify-content: flex-end;
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 745px;
   text-align: center;
 }
 
-.promo p{
+.promo p {
   display: block;
   width: 100%;
 }
@@ -393,19 +390,24 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 30px 70px;
-  align-items: center; /* Тут не знаю как выровнять картинку и текст в одну линию */
+  align-items: center;
+  /* Тут не знаю как выровнять картинку и текст в одну линию */
 }
 
 .hotel-item-image {
   margin-right: 30px;
+  min-height: 90px;
 }
 
 .hotel-items h3 {
+  margin: 0;
+  margin-bottom: 13px;
   font-size: 21px;
   line-height: 26px;
 }
 
 .hotel-items p {
+  margin: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
