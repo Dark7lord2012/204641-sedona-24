@@ -53,7 +53,7 @@
       </section>
 
       <section class="list-features">
-        <h3>Список преимуществ</h3>
+        <h3 class="visually-hidden">Список преимуществ</h3>
         <ul class="list-features">
           <li class="feature">
             <h4>Жилье</h4>
@@ -84,7 +84,7 @@
         </div>
       </section>
 
-      <ul class="list-features">
+      <ul class="list-features  list-items">
         <li>
           <section class="feature feature-3">
             <h3>Небольшая площадь</h3>
@@ -112,36 +112,37 @@
     <section class="search-hotels-form">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
-      <!--Если эта кнопка ведет к форме - это ссылка? Или все-таки кнопка, так как ведет только на форму?-->
-      <form class="search-hotels" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-          <legend class="visually-hidden">Форма поиска гостиниц в Седоне</legend>
-          <p>
-            <label>
-              Дата заезда
-              <input type="date" name="date-arrival" placeholder="24 апреля 2017">
-            </label>
-          </p>
-          <p>
-            <label>
-              Дата выезда
-              <input type="date" name="date-departure" placeholder="4 июля 2017">
-            </label>
-          </p>
-          <p>
-            <label>
-              Взрослые:
-              <input type="number" name="number-mans" min="0">
-            </label>
-            <label>
-              Дети:
-              <input type="number" name="number-childs" min="0">
-            </label>
-          </p>
-          <button class="button-submit" type="submit">Найти</button>
-        </fieldset>
-      </form>
+      <div class="search-modal">
+        <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
+        <form class="search-hotels" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend class="visually-hidden">Форма поиска гостиниц в Седоне</legend>
+            <p>
+              <label>
+                Дата заезда
+                <input type="date" name="date-arrival" placeholder="24 апреля 2017">
+              </label>
+            </p>
+            <p>
+              <label>
+                Дата выезда
+                <input type="date" name="date-departure" placeholder="4 июля 2017">
+              </label>
+            </p>
+            <p>
+              <label>
+                Взрослые:
+                <input type="number" name="number-mans" min="0">
+              </label>
+              <label>
+                Дети:
+                <input type="number" name="number-childs" min="0">
+              </label>
+            </p>
+            <button class="button-submit" type="submit">Найти</button>
+          </fieldset>
+        </form>
+      </div>
     </section>
     <section class="map-hotels">
       <!--Здесь размещена карта-->

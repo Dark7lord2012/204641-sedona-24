@@ -109,11 +109,14 @@ img {
   flex-wrap: wrap;
   min-height: 745px;
   text-align: center;
+  margin-bottom: 55px;
 }
 
 .promo p {
   display: block;
   width: 100%;
+  margin: 0;
+  margin-top: 35px;
 }
 
 .promo p:first-child {
@@ -128,12 +131,29 @@ img {
   color: #333333;
 }
 
-/* Тут разметка необязательной части ТЗ, но если верстать, то пусть стили будут опианы по порядку следования для будущего удобства */
+/* Преимущества */
 
-.feature h3 {
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-1,
+.feature-2 {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.feature {
+  min-height: 255px;
+}
+
+.feature h3,
+.feature h4{
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+  margin: 0;
 }
 
 .feature span,
@@ -142,6 +162,7 @@ img {
   line-height: 21px;
   font-weight: normal;
   color: #333333;
+  margin: 0;
 }
 
 .feature-text {
@@ -156,8 +177,15 @@ img {
 }
 
 .list-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   text-align: center;
+  margin: 0;
+}
+
+.list-items {
   background-color: #eeeeee;
 }
 
@@ -167,10 +195,10 @@ img {
 
 /*Кнопка и форма поиска гостиницы на главной*/
 
-.search-hotels {
-  display: flex;
-  flex-direction: column;
-  padding: 55px;
+.search-modal {
+  display: block;
+  width: 568px;
+  margin: 0 auto;
 }
 
 .search-hotels-form {
@@ -178,7 +206,16 @@ img {
   text-align: center;
 }
 
+.search-hotels {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 55px;
+  background-color: #ffffff;
+}
+
 .search-hotels-form h2 {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
 }
@@ -193,7 +230,7 @@ img {
 .search-hotels-form .button-search {
   padding-top: 30px;
   padding-bottom: 30px;
-  width: 570px;
+  width: 100%;
   font: inherit;
   font-size: 21px;
   line-height: 26px;
@@ -219,6 +256,7 @@ img {
 
 .search-hotels-form input {
   font: inherit;
+  border: none;
   background-color: #f2f2f2;
 }
 
