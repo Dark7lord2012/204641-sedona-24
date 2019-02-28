@@ -107,15 +107,15 @@ img {
   justify-content: flex-end;
   flex-direction: column;
   flex-wrap: wrap;
-  min-height: 720px;
+  min-height: 725px;
   text-align: center;
-  background: url("../img/mask-welcome.svg") no-repeat 50% 68%,
-    url("../img/promo.jpg") no-repeat 50% 105%;
+  background: url("../img/mask-welcome.svg") no-repeat 50% 67.5%,
+    url("../img/promo.jpg") no-repeat 50% 116%;
 }
 
 .promo-text {
   background-color: #ffffff;
-  padding-top: 40px;
+  padding-top: 45px;
   padding-bottom: 55px;
 }
 
@@ -148,6 +148,16 @@ img {
 
 .feature-1,
 .feature-2 {
+  display: flex;
+}
+
+.feature-1 .feature-image {
+  flex-grow: 2;
+  background: url("../img/feature-1.jpg") no-repeat 50% 50%;
+}
+
+.feature-1,
+.feature-2 {
   margin: 0;
   flex-grow: 1;
 }
@@ -161,7 +171,12 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
-  margin: 0;
+  margin: 0 78px;
+}
+
+.feature-text span,
+.list-items span {
+  padding: 20px 0;
 }
 
 .feature span,
@@ -173,9 +188,18 @@ img {
   margin: 0;
 }
 
+.feature-text,
+.list-items .feature {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 50px;
+  text-align: center;
+}
+
 .feature-text {
   background-color: #81b3d2;
-  text-align: center;
 }
 
 .feature-text h3,
@@ -191,6 +215,26 @@ img {
   list-style: none;
   text-align: center;
   margin: 0;
+  padding: 0;
+}
+
+/* тут я не мог подобрать такой селектор, чтобы подобраться именно к первому списку, написал доп. класс "не-число" */
+.list-features .not-a-number {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  padding: 160px 50px 80px;
+}
+
+.not-a-number h4 {
+  margin-bottom: 30px;
+}
+
+.feature-2 .feature-image {
+  order: -1;
+  flex-grow: 2;
+  background: url("../img/feature-2.jpg") no-repeat 50% 50%;
 }
 
 .list-items {
