@@ -107,15 +107,23 @@ img {
   justify-content: flex-end;
   flex-direction: column;
   flex-wrap: wrap;
-  min-height: 745px;
+  min-height: 720px;
   text-align: center;
-  margin-bottom: 55px;
+  outline: 5px solid red;
+  background: url("../img/mask-welcome.svg") no-repeat 50% 68%,
+    url("../img/promo.jpg") no-repeat 50% 105%;
+}
+
+.promo-text {
+  background-color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 55px;
 }
 
 .promo p {
   display: block;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 20px;
   margin-bottom: 0;
 }
 
@@ -129,6 +137,7 @@ img {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+
 }
 
 /* Преимущества */
