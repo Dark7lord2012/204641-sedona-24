@@ -109,7 +109,6 @@ img {
   flex-wrap: wrap;
   min-height: 720px;
   text-align: center;
-  outline: 5px solid red;
   background: url("../img/mask-welcome.svg") no-repeat 50% 68%,
     url("../img/promo.jpg") no-repeat 50% 105%;
 }
