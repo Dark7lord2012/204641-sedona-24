@@ -37,6 +37,7 @@ img {
 /* Навигация */
 
 .main-nav {
+  position: relative;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -49,7 +50,7 @@ img {
 
 .main-nav .main-header-logo {
   position: absolute;
-  left: 50%;
+  left: 600px;
   transform: translate(-50%);
 }
 
