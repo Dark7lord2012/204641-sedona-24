@@ -52,6 +52,7 @@ img {
   position: absolute;
   left: 600px;
   transform: translate(-50%);
+  z-index: 1;
 }
 
 .site-navigation {
@@ -105,13 +106,24 @@ img {
 /* Промо на главной странице */
 .promo {
   display: flex;
+  position: relative;
   justify-content: flex-end;
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 725px;
   text-align: center;
-  background: url("../img/mask-welcome.svg") no-repeat 50% 67.5%,
-    url("../img/promo.jpg") no-repeat 50% 116%;
+  background: url("../img/promo.jpg") no-repeat 50% 116%;
+}
+
+.promo::before {
+  position: absolute;
+  display: block;
+  content: "";
+  min-height: 60px;
+  width: 100%;
+  background: url("../img/mask-welcome.svg") no-repeat 50% 50%;
+  top: 450px;
+  left: 0;
 }
 
 .promo-text {
@@ -172,7 +184,7 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
-  margin: 0 78px;
+  margin: 0 70px;
 }
 
 .feature-text span,
@@ -236,6 +248,8 @@ img {
   order: -1;
   flex-grow: 2;
   background: url("../img/feature-2.jpg") no-repeat 50% 50%;
+  /* Ниже свойство из-которого */
+  background-size: cover;
 }
 
 .list-items {
