@@ -262,7 +262,7 @@ img {
 
 /*Кнопка и форма поиска гостиницы на главной*/
 
-.search-hotels-form > p{
+.search-hotels-form > p {
   margin-top: 25px;
   margin-bottom: 45px;
 }
@@ -330,6 +330,8 @@ img {
 .search-hotels-form fieldset {
   display: flex;
   border: none;
+  font-weight: wpap;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -342,9 +344,6 @@ img {
   justify-content: space-between;
   margin: 0;
   margin-bottom: 20px;
-}
-
-.search-hotels p {
 }
 
 .search-hotels-form input {
@@ -401,6 +400,7 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 120px;
 }
 
 .main-footer p:first-child {
@@ -410,12 +410,19 @@ img {
 
 .social-links {
   display: flex;
+  min-width: 150px;
+  justify-content: space-between;
   list-style: none;
 }
 
 .social-links a {
+  display: flex;
   color: #ffffff;
   background-color: #81b3d2;
+  width: 45px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-links a:hover {
@@ -427,9 +434,53 @@ img {
   background-color: #5496bd;
 }
 
-.main-footer p:last-child {
-  font-weight: 400;
+.social-links .twitter {
+  background: #81b3d2 url(../img/social_tw.svg) no-repeat 50% 50%;
 }
+
+.social-links .facebook {
+  background: #81b3d2 url(../img/social_fb.svg) no-repeat 50% 50%;
+}
+
+.social-links .youtube {
+  background: #81b3d2 url(../img/social_youtube.svg) no-repeat 50% 50%;
+}
+
+/* Возникли сложности с SVG не хочет отображаться встроенный в сам код, но тогда придется пределывать или для одной картинки вырезать сразу три с разными цветами*/
+
+.made-by {
+  display: flex;
+  font-weight: 200;
+  align-items: center;
+}
+
+.made-by a {
+  display: flex;
+  width: 115px;
+  margin-left: 15px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid red;
+}
+
+.logo-name path,
+.logo-name rect{
+  fill: #000000;
+}
+
+.logo-name:hover path,
+.logo-name:focus path,
+.logo-name:hover rect,
+.logo-name:focus rect {
+  fill: #81b3d2;
+}
+
+.logo-name:active path,
+.logo-name:active rect{
+  fill: #bdbbbc;
+}
+
 
 /* Стилизации фильтров на внутренней странице*/
 
