@@ -262,14 +262,20 @@ img {
 
 /*Кнопка и форма поиска гостиницы на главной*/
 
+.search-hotels-form > p{
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
 .search-modal {
   display: block;
+  position: relative;
   width: 568px;
   margin: 0 auto;
 }
 
 .search-hotels-form {
-  padding-top: 55px;
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -277,9 +283,13 @@ img {
   position: absolute;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
   padding: 55px;
   background-color: #ffffff;
 }
+
+
 
 .search-hotels-form h2 {
   margin: 0;
@@ -318,13 +328,34 @@ img {
 }
 
 .search-hotels-form fieldset {
+  display: flex;
   border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-hotels p {
+  display: flex;
+  box-sizing: border-box;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.search-hotels p {
 }
 
 .search-hotels-form input {
   font: inherit;
   border: none;
+  flex-grow: 1;
   background-color: #f2f2f2;
+  padding: 8px 0;
+  margin-left: 25px;
+  /* Почему-то поля растут вправо при задании отступов, не понимаю почему
+  margin-right: 10px;*/
 }
 
 .search-hotels-form input:hover {
@@ -343,6 +374,9 @@ img {
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
+  width: 100%;
+  padding: 17px;
+  margin-top: 60px
 }
 
 .search-hotels-form .button-submit:hover {
@@ -358,8 +392,7 @@ img {
 
 .map-hotels {
   min-height: 473px;
-  background-color: green;
-  /* временно для карты место занято*/
+  background: #00ff00 url("../img/map.jpg") center 0%;
 }
 
 /* Футер */

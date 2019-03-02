@@ -115,26 +115,26 @@
           <fieldset>
             <legend class="visually-hidden">Форма поиска гостиниц в Седоне</legend>
             <p>
-              <label>
-                Дата заезда
-                <input type="date" name="date-arrival" placeholder="24 апреля 2017">
+              <label for="date-arrival">
+                Дата заезда:
               </label>
+              <input type="date" name="date-arrival" placeholder="24 апреля 2017" id="date-arrival">
             </p>
             <p>
-              <label>
-                Дата выезда
-                <input type="date" name="date-departure" placeholder="4 июля 2017">
+              <label for="date-departure">
+                Дата выезда:
               </label>
+              <input type="date" name="date-departure" placeholder="4 июля 2017" id="date-departure">
             </p>
             <p>
-              <label>
+              <label for="number-mans">
                 Взрослые:
-                <input type="number" name="number-mans" min="0">
               </label>
-              <label>
+              <input type="number" name="number-mans" min="0" id="number-mans">
+              <label for="number-childs">
                 Дети:
-                <input type="number" name="number-childs" min="0">
               </label>
+              <input type="number" name="number-childs" min="0" id="number-childs">
             </p>
             <button class="button-submit" type="submit">Найти</button>
           </fieldset>
