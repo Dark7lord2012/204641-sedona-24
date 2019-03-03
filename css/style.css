@@ -487,7 +487,7 @@ img {
   border: none;
   padding: 0;
   margin: 0;
-  margin-right: 125px;
+  margin-right: 120px;
 }
 
 .select-filters fieldset:last-child {
@@ -519,13 +519,38 @@ img {
 }
 
 .select-filters p {
-  padding-left: 25px;
+  padding-left: 42px;
   margin-top: 0;
   margin-bottom: 25px;
 }
 
 .select-filters p:last-child {
   margin-bottom: 5px;
+}
+
+.filters-check {
+  cursor: pointer;
+  position: relative;
+}
+
+.filters-check::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: -2px;
+  left: -40px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+
+}
+
+.checkbox:checked ~ .filters-check::before {
+  border: none;
+  top: -4px;
+  width: 27px;
+  height: 27px;
+  background: url(../img/checkbox.svg) no-repeat 50% 50%;
 }
 
 /* Сложный фильтр, нагло спертый с демонстрации */
