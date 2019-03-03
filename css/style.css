@@ -23,7 +23,8 @@ input[type="radio"].visually-hidden {
   height: 1px;
   margin: -1px;
   border: 0;
-  padding: 0 white-space: nowrap;
+  padding: 0;
+  white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -248,7 +249,7 @@ img {
   order: -1;
   flex-grow: 2;
   background: url("../img/feature-2.jpg") no-repeat 50% 50%;
-  /* Ниже свойство из-которого */
+  /* Ниже свойство без которого у картинки белая полоска снизу  */
   background-size: cover;
 }
 
@@ -288,8 +289,6 @@ img {
   padding: 55px;
   background-color: #ffffff;
 }
-
-
 
 .search-hotels-form h2 {
   margin: 0;
@@ -465,7 +464,7 @@ img {
 }
 
 .logo-name path,
-.logo-name rect{
+.logo-name rect {
   fill: #000000;
 }
 
@@ -477,21 +476,24 @@ img {
 }
 
 .logo-name:active path,
-.logo-name:active rect{
+.logo-name:active rect {
   fill: #bdbbbc;
 }
 
-
+/************************** Внутренняя страница ****************************/
 /* Стилизации фильтров на внутренней странице*/
 
-.filters fieldset {
+.select-filters fieldset {
   border: none;
-  margin-right: 115px;
+  padding: 0;
+  margin: 0;
+  margin-right: 125px;
 }
 
-.filters fieldset:last-child {
+.select-filters fieldset:last-child {
   margin-left: auto;
   margin-right: 0;
+  padding-left: 10px;
 }
 
 .filters legend {
@@ -503,39 +505,176 @@ img {
 .select-filters {
   display: flex;
   justify-content: space-between;
-  padding: 30px 70px;
+  padding: 27px 70px;
   line-height: 21px;
   font-weight: normal;
   color: #ffffff;
   background-color: #30626b;
+  background-image: url(../img/bg-filters.jpg);
+  background-position: 50% 16%;
 }
 
-.filters button,
-.filters input {
-  font: inherit;
+.select-filters legend {
+  margin-bottom: 25px;
+}
+
+.select-filters p {
+  padding-left: 25px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.select-filters p:last-child {
+  margin-bottom: 5px;
+}
+
+/* Сложный фильтр, нагло спертый с демонстрации */
+
+.filters-price-per-day {
+  width: 320px;
+}
+
+.filters-price-per-day legend {
+  margin-bottom: 10px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
   border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 60px;
+}
+
+.price-controls input {
+  width: 60px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
   text-transform: uppercase;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
   color: #ffffff;
-  background-color: transparent;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.filters button:hover {
+.btn-transparent:hover {
   color: #000000;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
-.filter-sort legend {
+/* Фильтры сортировки */
+
+.filter-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: nowrap;
+  margin: 0;
+  padding: 20px 70px;
+  border: none;
+}
+
+.filter-sort-title {
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
-.filter-sort p {
+.filter-sort p:not(.filter-sort-title) {
   font-size: 12px;
   line-height: 18px;
 }
 
 .filter-sort ul {
+  display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .filters-sort-type li {
@@ -544,6 +683,7 @@ img {
   line-height: 18px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
 }
 
 .filters-sort-type li:hover {
@@ -562,10 +702,12 @@ img {
 
 .filters-sort-order {
   color: rgba(0, 0, 0, 0.3);
+
 }
 
 .filters-sort-order .active {
   color: #81b3d2;
+  margin-left: 10px;
 }
 
 /*Список гостиниц на странице гостиниц*/
@@ -573,6 +715,7 @@ img {
 .hotels-items {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .hotels-items li {
@@ -580,7 +723,12 @@ img {
   justify-content: space-between;
   padding: 30px 70px;
   align-items: center;
+  border-bottom: 1px solid #e5e5e5;
   /* Тут не знаю как выровнять картинку и текст в одну линию */
+}
+
+.hotels-items li:first-child {
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-item-image {
@@ -607,13 +755,15 @@ img {
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
+  padding: 5px 16px;
 }
 
 .hotel-item-info a:first-of-type {
   background-color: #81b3d2;
 }
 
-.hotel-item-info a:first-of-type:hover {
+.hotel-item-info a:first-of-type:hover,
+.hotel-item-info a:first-of-type:focus {
   background-color: #669ec0;
 }
 
@@ -626,7 +776,8 @@ img {
   background-color: #766357;
 }
 
-.hotel-item-info a:last-of-type:hover {
+.hotel-item-info a:last-of-type:hover,
+.hotel-item-info a:last-of-type:focus {
   background-color: #604e43;
 }
 
@@ -643,5 +794,6 @@ img {
   line-height: 21px;
   font-weight: 400;
   color: #666666;
+  padding: 5px 14px;
   background-color: #f2f2f2;
 }
