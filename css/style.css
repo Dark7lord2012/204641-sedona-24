@@ -428,6 +428,8 @@ img {
   min-width: 150px;
   justify-content: space-between;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-links a {
@@ -476,7 +478,6 @@ img {
   height: 40px;
   justify-content: center;
   align-items: center;
-  outline: 2px solid red;
 }
 
 .logo-name path,
@@ -690,11 +691,11 @@ img {
 
 .filter-sort {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   font-weight: nowrap;
   margin: 0;
-  padding: 20px 70px;
+  padding: 25px 70px 20px;
   border: none;
 }
 
@@ -718,13 +719,24 @@ img {
   margin: 0;
 }
 
+.filter-sort-btn {
+  display: flex;
+  margin-right: auto;
+  margin-left: 50px;
+  align-items: baseline;
+}
+
+.filter-sort-btn p {
+  margin-right: 40px;
+}
+
 .filters-sort-type li {
   border-bottom: 1px dotted #81b3d2;
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .filters-sort-type li:hover {
@@ -762,10 +774,9 @@ img {
 .hotels-items li {
   display: flex;
   justify-content: space-between;
-  padding: 30px 70px;
+  padding: 30px 72px 22px;
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  /* Тут не знаю как выровнять картинку и текст в одну линию */
 }
 
 .hotels-items li:first-child {
@@ -779,7 +790,7 @@ img {
 
 .hotel-items h3 {
   margin: 0;
-  margin-bottom: 13px;
+  margin-top: -6px;
   font-size: 21px;
   line-height: 26px;
 }
@@ -792,15 +803,34 @@ img {
   color: #333333;
 }
 
+.hotel-item-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
+  margin-top: -5px;
+}
+
+.type-and-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.hotel-item-info p:last-child {
+  margin-right: 79px;
+}
+
 .hotel-item-info a {
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-  padding: 5px 16px;
+  padding: 4px 17px;
 }
 
 .hotel-item-info a:first-of-type {
   background-color: #81b3d2;
+  margin-right: 4px;
 }
 
 .hotel-item-info a:first-of-type:hover,
@@ -828,6 +858,9 @@ img {
 }
 
 .hotel-item-rate {
+  display: flex;
+  align-items: flex-end;
+  min-height: 75px;
   margin-left: auto;
 }
 
