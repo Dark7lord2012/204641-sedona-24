@@ -287,7 +287,7 @@ img {
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  padding: 55px;
+  padding: 53px 55px;
   background-color: #ffffff;
 }
 
@@ -305,8 +305,8 @@ img {
 }
 
 .search-hotels-form .button-search {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 31px;
   width: 100%;
   font: inherit;
   font-size: 21px;
@@ -346,18 +346,16 @@ img {
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  border: 1px solid transparent;
 }
 
 .search-hotels-form input {
   font: inherit;
   border: none;
-  flex-grow: 1;
+  width: 76%;
   background-color: #f2f2f2;
-  padding: 8px 0;
-  margin-left: 25px;
-  /* Почему-то поля растут вправо при задании отступов, не понимаю почему*/
-  margin-right: 10px;
+  padding: 6px 35px 6px 5px;
 }
 
 .search-hotels-form input:hover {
@@ -366,6 +364,20 @@ img {
 
 .search-hotels-form input:focus {
   background-color: #ffffff;
+}
+
+.search-hotels label {
+  display: flex;
+  min-width: 90px;
+  margin-right: 19px;
+}
+
+.search-hotels input + label  {
+  box-sizing: border-box;
+  min-width: 40px;
+  margin-left:  55px;
+  margin-right: 25px;
+
 }
 
 .search-hotels-form .button-submit {
@@ -378,7 +390,7 @@ img {
   border: none;
   width: 100%;
   padding: 17px;
-  margin-top: 60px
+  margin-top: 55px
 }
 
 .search-hotels-form .button-submit:hover {
