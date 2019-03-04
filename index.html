@@ -30,7 +30,7 @@
   <main class="container">
     <h1 class="visually-hidden">Sedona</h1>
     <section class="promo">
-     <h2 class="visually-hidden">Промо гостиницы</h2>
+      <h2 class="visually-hidden">Промо гостиницы</h2>
       <div class="promo-text">
         <p>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон! </p>
@@ -127,23 +127,25 @@
               </label>
               <input type="date" name="date-departure" value="2017-07-04" id="date-departure">
             </p>
-            <p>
-              <label for="number-mans">
-                Взрослые:
-              </label>
-              <input type="number" name="number-mans" min="0" id="number-mans">
-              <label for="number-childs">
-                Дети:
-              </label>
-              <input type="number" name="number-childs" min="0" id="number-childs">
-            </p>
+            <div class="number-of-people">
+              <p>
+                <label for="number-mans">
+                  Взрослые:
+                </label>
+                <input type="number" name="number-mans" min="0" id="number-mans">
+                <label for="number-childs">
+                  Дети:
+                </label>
+                <input type="number" name="number-childs" min="0" id="number-childs">
+              </p>
+            </div>
             <button class="button-submit" type="submit">Найти</button>
           </fieldset>
         </form>
       </div>
     </section>
     <section class="map-hotels">
-     <h2 class="visually-hidden">Гостиницы на карте</h2>
+      <h2 class="visually-hidden">Гостиницы на карте</h2>
       <!--Здесь размещена карта-->
     </section>
   </main>

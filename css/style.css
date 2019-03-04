@@ -358,26 +358,32 @@ img {
   padding: 6px 35px 6px 5px;
 }
 
+.number-of-people input{
+  box-sizing: border-box;
+  width: 114px;
+  padding-left: 35px;
+}
+
+.number-of-people label:last-of-type {
+  outline: 1px solid red;
+  box-sizing: border-box;
+  padding-right: 0;
+  padding-left: 50px;
+}
+
 .search-hotels-form input:hover {
   background-color: #ebebeb;
 }
 
 .search-hotels-form input:focus {
   background-color: #ffffff;
+  outline: 2px solid #e5e5e5;
 }
 
 .search-hotels label {
   display: flex;
   min-width: 90px;
   margin-right: 19px;
-}
-
-.search-hotels input + label  {
-  box-sizing: border-box;
-  min-width: 40px;
-  margin-left:  55px;
-  margin-right: 25px;
-
 }
 
 .search-hotels-form .button-submit {
