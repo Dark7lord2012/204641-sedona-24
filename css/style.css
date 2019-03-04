@@ -278,6 +278,7 @@ img {
 .search-hotels-form {
   padding-top: 50px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .search-hotels {
@@ -331,6 +332,9 @@ img {
   border: none;
   font-weight: wpap;
   flex-direction: column;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -352,8 +356,8 @@ img {
   background-color: #f2f2f2;
   padding: 8px 0;
   margin-left: 25px;
-  /* Почему-то поля растут вправо при задании отступов, не понимаю почему
-  margin-right: 10px;*/
+  /* Почему-то поля растут вправо при задании отступов, не понимаю почему*/
+  margin-right: 10px;
 }
 
 .search-hotels-form input:hover {
