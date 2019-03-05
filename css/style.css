@@ -234,11 +234,40 @@ img {
 
 /* тут я не мог подобрать такой селектор, чтобы подобраться именно к первому списку, написал доп. класс "не-число" */
 .list-features .not-a-number {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   justify-content: flex-end;
   padding: 160px 50px 80px;
+}
+
+.not-a-number:first-child::before,
+.not-a-number:nth-child(2)::before,
+.not-a-number:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.not-a-number:first-child::before {
+  width: 75px;
+  height: 72px;
+  background: url(../img/list-feature-1-house.svg) no-repeat 50% 50%;
+}
+
+.not-a-number:nth-child(2)::before {
+  width: 74px;
+  height: 70px;
+  background: url(../img/list-feature-2-food.svg) no-repeat 50% 50%;
+}
+
+.not-a-number:nth-child(3)::before {
+  width: 64px;
+  height: 76px;
+  background: url(../img/list-feature-3-suvenir.svg) no-repeat 50% 50%;
 }
 
 .not-a-number h4 {
@@ -351,6 +380,7 @@ img {
 }
 
 .search-hotels-form input {
+  position: relative;
   font: inherit;
   border: none;
   width: 76%;
@@ -358,14 +388,104 @@ img {
   padding: 6px 35px 6px 5px;
 }
 
-.number-of-people input{
+.calendar-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+}
+
+.calendar-btn path,
+.calendar-btn rect {
+  fill: #cacaca;
+}
+
+.calendar-btn:hover path,
+.calendar-btn:focus path,
+.calendar-btn:hover rect,
+.calendar-btn:focus rect {
+  fill: #000000;
+}
+
+.calendar-btn:active path,
+.calendar-btn:active rect {
+  fill: #81b3d2;
+}
+
+.btn-minus {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 3px;
+  /*outline: 1px solid red;*/
+  left: 180px;
+  background-color: #cacaca;
+}
+
+.btn-minus:nth-child(2) {
+  z-index: 1;
+  left: 410px;
+}
+
+.btn-plus {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  left: 255px;
+
+}
+
+.plus-horizontal {
+  display: block;
+  width: 11px;
+  height: 3px;
+  background-color: #cacaca;
+}
+
+.plus-vertical {
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 11px;
+  background-color: #cacaca;
+}
+
+.btn-plus:last-of-type {
+  left: 480px;
+}
+
+.btn-minus:nth-child(2) {
+  z-index: 1;
+  left: 410px;
+}
+
+
+
+.btn-minus:hover,
+.btn-minus:focus,
+.btn-plus>*:hover,
+.btn-plus>*:focus {
+  background-color: #000000;
+}
+
+.btn-minus:active,
+.btn-plus>*:active{
+  background-color: #81b3d2;
+}
+
+.number-of-people input {
   box-sizing: border-box;
   width: 114px;
-  padding-left: 35px;
+  padding-left: 50px;
 }
 
 .number-of-people label:last-of-type {
-  outline: 1px solid red;
   box-sizing: border-box;
   padding-right: 0;
   padding-left: 50px;
@@ -383,7 +503,7 @@ img {
 .search-hotels label {
   display: flex;
   min-width: 90px;
-  margin-right: 19px;
+  margin-right: 20px;
 }
 
 .search-hotels-form .button-submit {
@@ -419,12 +539,14 @@ img {
 
 .main-footer .container {
   display: flex;
+  box-sizing: border-box;
   justify-content: space-around;
   align-items: center;
   min-height: 120px;
 }
 
 .main-footer p:first-child {
+  margin-left: 20px;
   font-size: 21px;
   line-height: 26px;
 }
@@ -435,6 +557,7 @@ img {
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  padding-left: 30px;
   margin: 0;
 }
 
@@ -469,18 +592,17 @@ img {
   background: #81b3d2 url(../img/social_youtube.svg) no-repeat 50% 50%;
 }
 
-/* Возникли сложности с SVG не хочет отображаться встроенный в сам код, но тогда придется пределывать или для одной картинки вырезать сразу три с разными цветами*/
-
 .made-by {
   display: flex;
   font-weight: 200;
   align-items: center;
+  margin-right: -10px
 }
 
 .made-by a {
   display: flex;
   width: 115px;
-  margin-left: 15px;
+  margin-left: 10px;
   height: 40px;
   justify-content: center;
   align-items: center;
@@ -809,7 +931,7 @@ img {
   color: #333333;
 }
 
-.hotel-item-info{
+.hotel-item-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
