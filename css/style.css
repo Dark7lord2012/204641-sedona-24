@@ -452,9 +452,6 @@ img {
   z-index: 1;
   left: 410px;
 }
-
-
-
 .btn-minus:hover,
 .btn-minus:focus,
 .btn-plus:hover,
@@ -869,14 +866,47 @@ img {
   color: #000000;
 }
 
+.order-increase,
+.order-decrease {
+  position: relative;
+}
+
+.order-increase::before {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 6px solid transparent;
+  border-bottom: 11px solid #cacaca;
+  bottom: -1px;
+  right: 25px;
+}
+
+.order-decrease::before {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 6px solid transparent;
+  border-top: 11px solid #cacaca;
+  bottom: -6px;
+  right: 2px;
+}
+
+/* Цвет порядка по возрастанию и убывания должен меняться при навешивании класса active в li */
+
+.active .order-decrease::before {
+  border-top: 11px solid #81b3d2;
+}
+
+.active .order-increase::before {
+  border-bottom: 11px solid #81b3d2;
+}
+
 .filters-sort-order {
   color: rgba(0, 0, 0, 0.3);
-
 }
 
 .filters-sort-order .active {
   color: #81b3d2;
-  margin-left: 10px;
 }
 
 /*Список гостиниц на странице гостиниц*/
@@ -975,6 +1005,7 @@ img {
 
 .hotel-item-rate {
   display: flex;
+  position: relative;
   align-items: flex-end;
   min-height: 75px;
   margin-left: auto;
@@ -987,3 +1018,52 @@ img {
   padding: 5px 14px;
   background-color: #f2f2f2;
 }
+
+.stars {
+  display: flex;
+  position: absolute;
+  width: 120px;
+  height: 25px;
+  top: -15px;
+  left: -10px;
+}
+
+.star-1 {
+  background: url(../img/star.svg) no-repeat 100% 25%;
+}
+
+.star-2 {
+  background: url(../img/star.svg) no-repeat 100% 25%,
+    url(../img/star.svg) no-repeat 78% 25%;
+}
+
+.star-2 {
+  background:
+    url(../img/star.svg) no-repeat 100% 25%,
+    url(../img/star.svg) no-repeat 78% 25%;
+}
+
+.star-3 {
+  background:
+    url(../img/star.svg) no-repeat 100% 25%,
+    url(../img/star.svg) no-repeat 78% 25%,
+    url(../img/star.svg) no-repeat 55% 25%;
+}
+
+.star-4 {
+  background:
+    url(../img/star.svg) no-repeat 100% 25%,
+    url(../img/star.svg) no-repeat 78% 25%,
+    url(../img/star.svg) no-repeat 55% 25%,
+    url(../img/star.svg) no-repeat 32% 25%;
+}
+
+.star-5 {
+  background:
+    url(../img/star.svg) no-repeat 100% 25%,
+    url(../img/star.svg) no-repeat 78% 25%,
+    url(../img/star.svg) no-repeat 55% 25%,
+    url(../img/star.svg) no-repeat 32% 25%,
+    url(../img/star.svg) no-repeat 9% 25%;
+}
+
