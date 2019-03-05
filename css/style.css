@@ -417,12 +417,14 @@ img {
 
 .btn-minus {
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 12px;
-  height: 3px;
-  /*outline: 1px solid red;*/
+  height: 12px;
   left: 180px;
-  background-color: #cacaca;
+  color: #cacaca;
+  font-size: 25px;
 }
 
 .btn-minus:nth-child(2) {
@@ -438,26 +440,12 @@ img {
   width: 12px;
   height: 12px;
   left: 255px;
-
-}
-
-.plus-horizontal {
-  display: block;
-  width: 11px;
-  height: 3px;
-  background-color: #cacaca;
-}
-
-.plus-vertical {
-  display: block;
-  position: absolute;
-  width: 2px;
-  height: 11px;
-  background-color: #cacaca;
+  color: #cacaca;
+  font-size: 25px;
 }
 
 .btn-plus:last-of-type {
-  left: 480px;
+  left: 485px;
 }
 
 .btn-minus:nth-child(2) {
@@ -469,14 +457,14 @@ img {
 
 .btn-minus:hover,
 .btn-minus:focus,
-.btn-plus>*:hover,
-.btn-plus>*:focus {
-  background-color: #000000;
+.btn-plus:hover,
+.btn-plus:focus {
+  color: #000000;
 }
 
 .btn-minus:active,
-.btn-plus>*:active{
-  background-color: #81b3d2;
+.btn-plus:active{
+  color: #81b3d2;
 }
 
 .number-of-people input {
