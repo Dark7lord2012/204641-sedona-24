@@ -521,6 +521,7 @@ img {
   z-index: 0;
   min-height: 594px;
   background: #00ff00 url("../img/map.jpg") center 50%;
+  margin-bottom: -120px;
 }
 
 /* Футер */
@@ -531,7 +532,6 @@ img {
   justify-content: space-around;
   align-items: center;
   min-height: 120px;
-  margin-top: -120px;
   opacity: 0.9;
 
 }
