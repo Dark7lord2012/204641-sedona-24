@@ -102,6 +102,9 @@ img {
   margin: 0 auto;
   width: 1200px;
   background-color: #ffffff;
+  box-shadow:
+    5px 0px 15px -3px #dadada,
+    -5px 0px 15px -3px #dadada;
 }
 
 /* Промо на главной странице */
