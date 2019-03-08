@@ -300,28 +300,12 @@ img {
   margin-bottom: 45px;
 }
 
-.search-modal {
-  display: block;
-  position: relative;
-  width: 568px;
-  margin: 0 auto;
-}
-
 .search-hotels-form {
+  position: relative;
   padding-top: 50px;
   text-align: center;
   box-sizing: border-box;
-}
-
-.search-hotels {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 53px 55px;
-  z-index: 1;
-  background-color: #ffffff;
+  z-index: 5;
 }
 
 .search-hotels-form h2 {
@@ -337,9 +321,39 @@ img {
   color: #333333;
 }
 
+.search-modal {
+  display: block;
+  position: relative;
+  width: 568px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.search-hotels {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 53px 55px;
+  background-color: #ffffff;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.search-hotels-show {
+  transform: translateY(0%);
+  transition: 0.5s;
+  opacity: 1;
+}
+
+
 .search-hotels-form .button-search {
   padding-top: 31px;
   padding-bottom: 31px;
+  position: relative;
   width: 100%;
   font: inherit;
   font-size: 21px;
@@ -348,6 +362,7 @@ img {
   color: #ffffff;
   background-color: #766357;
   border: none;
+  z-index: 3;
 }
 
 .search-hotels-form .button-search:hover,
@@ -504,9 +519,8 @@ img {
 /* Карта на главной */
 
 .map-hotels {
-  z-index: 0;
   min-height: 594px;
-  background: #00ff00 url("../img/map.jpg") center 50%;
+  background: #00ff00 url("../img/map.jpg") center;
   margin-bottom: -120px;
 }
 
@@ -660,12 +674,11 @@ img {
   content: "";
   position: absolute;
   width: 19px;
-  height: 19px;
+  height: 20px;
   top: -2px;
   left: -40px;
-  border: 2px solid #ffffff;
+  border: 1.75px solid #ffffff;
   border-radius: 3px;
-
 }
 
 .checkbox:checked ~ .filters-check::before {
