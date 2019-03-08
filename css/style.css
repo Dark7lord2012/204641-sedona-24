@@ -548,7 +548,8 @@ img {
   align-items: center;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links a:focus {
   background-color: #669ec0;
 }
 
@@ -871,6 +872,24 @@ img {
   border-bottom: 11px solid #cacaca;
   bottom: -1px;
   right: 25px;
+}
+
+.order-increase:hover::before,
+.order-increase:focus::before {
+  border-bottom-color: #000000;
+}
+
+.order-decrease:hover::before,
+.order-decrease:focus::before {
+  border-top-color: #000000;
+}
+
+.order-increase:active::before {
+  border-bottom-color: #81b3d2;
+}
+
+.order-decrease:active::before {
+  border-top-color: #81b3d2;
 }
 
 .order-decrease::before {
