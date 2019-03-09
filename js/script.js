@@ -20,19 +20,26 @@ try {
 
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (searchHotelForm.classList.contains("search-hotels-show")) {
+  /*if (searchHotelForm.classList.contains("search-hotels-show")) {
     searchHotelForm.classList.remove("search-hotels-show");
     searchHotelForm.classList.remove("search-hotels-error");
   } else {
     searchHotelForm.classList.add("search-hotels-show");
-  }
+  }*/
+
+  searchHotelForm.classList.toggle("search-hotels-show");
+
 });
 
 buttonSubmit.addEventListener("click", function (evt) {
   if (!dataArrival.value || !dataDeparture.value || !numberMans.value || !numberChilds.value) {
     evt.stopPropagation();
     evt.preventDefault();
-    searchHotelForm.classList.add("search-hotels-error");
+
+    setTimeout(function () {
+      searchHotelForm.classList.add("search-hotels-error");
+    }, 100);
+    searchHotelForm.classList.remove("search-hotels-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("dataArrival", dataArrival.value);
