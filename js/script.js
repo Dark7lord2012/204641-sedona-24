@@ -2,27 +2,53 @@ var buttonSearch = document.querySelector(".button-search");
 var searchHotelForm = document.querySelector(".search-hotels");
 var formSearchHotels = document.querySelector(".search-hotels");
 var dataArrival = formSearchHotels.querySelector("[name=date-arrival]");
-var dataADeparture = formSearchHotels.querySelector("[name=date-departure]");
+var dataDeparture = formSearchHotels.querySelector("[name=date-departure]");
 var numberMans = formSearchHotels.querySelector("[name=number-mans]");
 var numberChilds = formSearchHotels.querySelector("[name=number-childs]");
 var buttonSubmit = formSearchHotels.querySelector(".button-submit");
+var isStorageSupport = true;
+var storage = "";
 
-buttonSearch.addEventListener("click", function(evt) {
+try {
+  storage = localStorage.getItem("dataArrival");
+  storage = localStorage.getItem("dataDeparture");
+  storage = localStorage.getItem("numberMans");
+  storage = localStorage.getItem("numberChilds");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  searchHotelForm.classList.toggle("search-hotels-show");
-});
-
-buttonSubmit.addEventListener("click", function(evt) {
-  if(!dataArrival.value || !dataADeparture.value || !numberMans.value ||!numberChilds.value) {
-    evt.preventDefault;
-    console.log("Не все значения заданы или они пусты");
+  if (searchHotelForm.classList.contains("search-hotels-show")) {
+    searchHotelForm.classList.remove("search-hotels-show");
+    searchHotelForm.classList.remove("search-hotels-error");
   } else {
-    localStorage.setItem("dataArrival", dataArrival.value);
+    searchHotelForm.classList.add("search-hotels-show");
   }
 });
 
-console.log(dataArrival.value);
-console.log(dataADeparture);
-console.log(numberMans);
-console.log(numberChilds);
-console.log(buttonSubmit);
+buttonSubmit.addEventListener("click", function (evt) {
+  if (!dataArrival.value || !dataDeparture.value || !numberMans.value || !numberChilds.value) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    searchHotelForm.classList.add("search-hotels-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("dataArrival", dataArrival.value);
+      localStorage.setItem("dataArrival", dataDeparture.value);
+      localStorage.setItem("dataArrival", numberMans.value);
+      localStorage.setItem("dataArrival", numberChilds.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (searchHotelForm.classList.contains("search-hotels-show")) {
+      searchHotelForm.classList.remove("search-hotels-show");
+      searchHotelForm.classList.remove("search-hotels-error");
+    }
+  }
+});
