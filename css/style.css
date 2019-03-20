@@ -66,7 +66,6 @@ img {
 }
 
 .site-navigation li {
-  text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -77,10 +76,12 @@ img {
 
 .site-navigation a:first-child {
   margin-left: 72px;
+  text-align: left;
 }
 
 .site-navigation a:last-child {
   margin-right: 72px;
+  text-align: right;
 }
 
 .site-navigation a:hover,
@@ -92,7 +93,7 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation current-page {
+.site-navigation .current-page {
   color: #766357;
 }
 
@@ -116,7 +117,7 @@ img {
   flex-wrap: wrap;
   min-height: 725px;
   text-align: center;
-  background: url("../img/promo.jpg") no-repeat 50% 116%;
+  background: #798c9a url("../img/promo.jpg") no-repeat 50% 116%;
 }
 
 .promo::before {
@@ -132,20 +133,21 @@ img {
 
 .promo-text {
   background-color: #ffffff;
-  padding-top: 45px;
-  padding-bottom: 55px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .promo p {
   display: block;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 0;
 }
 
 .promo p:first-child {
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
 }
 
 .promo p:last-child {
@@ -153,7 +155,6 @@ img {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
-
 }
 
 /* Преимущества */
@@ -180,7 +181,7 @@ img {
 }
 
 .feature {
-  min-height: 255px;
+  min-height: 256px;
 }
 
 .feature h3,
@@ -188,12 +189,12 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
-  margin: 0 70px;
+  margin: 0 75px 5px;
 }
 
 .feature-text span,
 .list-items span {
-  padding: 20px 0;
+  padding: 21px 0 21px;
 }
 
 .feature span,
@@ -211,8 +212,13 @@ img {
   max-width: 400px;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 45px 49px 50px;
   text-align: center;
+}
+
+.list-items p {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .feature-text {
@@ -236,13 +242,17 @@ img {
 }
 
 /* тут я не мог подобрать такой селектор, чтобы подобраться именно к первому списку, написал доп. класс "не-число" */
-.list-features .not-a-number {
+.not-a-number {
   position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   justify-content: flex-end;
-  padding: 160px 50px 80px;
+  padding: 160px 55px 82px;
+}
+
+.not-a-number + .not-a-number {
+  margin-right: 15px;
 }
 
 .not-a-number:before {
@@ -256,25 +266,25 @@ img {
 }
 
 .not-a-number--house::before {
-  width: 75px;
-  height: 72px;
+  width: 77px;
+  height: 74px;
   background-image: url(../img/list-feature-1-house.svg);
 }
 
 .not-a-number--food::before {
-  width: 74px;
-  height: 70px;
+  width: 75px;
+  height: 71px;
   background-image: url(../img/list-feature-2-food.svg);
 }
 
 .not-a-number--suvenir::before {
-  width: 64px;
-  height: 76px;
+  width: 65px;
+  height: 75px;
   background-image: url(../img/list-feature-3-suvenir.svg);
 }
 
 .not-a-number h4 {
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .feature-2 .feature-image {
@@ -296,7 +306,7 @@ img {
 /*Кнопка и форма поиска гостиницы на главной*/
 
 .search-hotels-form > p {
-  margin-top: 25px;
+  margin-top: 24px;
   margin-bottom: 45px;
 }
 
@@ -306,6 +316,12 @@ img {
   text-align: center;
   box-sizing: border-box;
   z-index: 5;
+}
+
+.search-hotels-form button {
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 .search-hotels-form h2 {
@@ -396,7 +412,7 @@ img {
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
   border: 1px solid transparent;
 }
 
@@ -406,7 +422,9 @@ img {
   border: none;
   width: 76%;
   background-color: #f2f2f2;
-  padding: 6px 35px 6px 15px;
+  text-transform: uppercase;
+  padding: 6px 35px 6px 12px;
+  outline: none;
 }
 
 .calendar-btn {
@@ -447,6 +465,7 @@ img {
   margin: 0 -6px;
   color: #cacaca;
   font-size: 25px;
+  line-height: 0;
   z-index: 1;
 }
 
@@ -493,7 +512,7 @@ img {
 
 .search-hotels label {
   display: flex;
-  min-width: 90px;
+  min-width: 92px;
   margin-right: 20px;
 }
 
@@ -507,7 +526,7 @@ img {
   border: none;
   width: 100%;
   padding: 17px;
-  margin-top: 55px
+  margin-top: 51px
 }
 
 .search-hotels-form .button-submit:hover {
@@ -546,7 +565,7 @@ img {
 /* Карта на главной */
 
 .map-hotels {
-  min-height: 594px;
+  min-height: 590px;
   background: #00ff00 url("../img/map.jpg") center;
   margin-bottom: -120px;
 }
@@ -615,7 +634,7 @@ img {
   display: flex;
   font-weight: 200;
   align-items: center;
-  margin-right: -10px
+  margin-right: -10px;
 }
 
 .made-by a {
@@ -700,19 +719,15 @@ img {
 .filters-check::before {
   content: "";
   position: absolute;
-  width: 19px;
-  height: 20px;
-  top: -2px;
+  width: 23px;
+  height: 23px;
   left: -40px;
-  border: 1.75px solid #ffffff;
-  border-radius: 3px;
+  background: url(../img/checkbox-off.svg) no-repeat 50% 50%;
 }
 
 .checkbox:checked ~ .filters-check::before {
-  border: none;
-  top: -4px;
   width: 27px;
-  height: 27px;
+  height: 23px;
   background: url(../img/checkbox.svg) no-repeat 50% 50%;
 }
 
@@ -728,7 +743,7 @@ img {
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 33px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #ffffff;
@@ -749,7 +764,7 @@ img {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 32px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -757,7 +772,7 @@ img {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 60px;
+  padding-left: 62px;
 }
 
 .price-controls input {
@@ -772,7 +787,7 @@ img {
 
 .range-controls {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 31.5px;
 }
 
 .range-controls .scale {
@@ -797,7 +812,6 @@ img {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
-
 }
 
 .range-toggle:hover {
@@ -815,6 +829,7 @@ img {
 .btn-transparent {
   display: block;
   margin: 0 auto;
+  margin-left: 84px;
   padding: 6px 35px;
 
   font-size: 14px;
@@ -853,9 +868,10 @@ img {
   padding: 0;
 }
 
-.filter-sort p:not(.filter-sort-title) {
+.filter-sort h3 {
   font-size: 12px;
   line-height: 18px;
+  margin-right: 40px;
 }
 
 .filter-sort ul {
@@ -987,7 +1003,7 @@ img {
 
 .hotel-items h3 {
   margin: 0;
-  margin-top: -6px;
+  margin-top: -9px;
   font-size: 21px;
   line-height: 26px;
 }
@@ -1004,7 +1020,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 90px;
+  min-height: 87px;
   margin-top: -5px;
 }
 
@@ -1018,38 +1034,42 @@ img {
   margin-right: 79px;
 }
 
-.hotel-item-info a {
+.hotel-item-info h3 a {
+  color: #000000;
+}
+
+.btn-item-info a {
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
   padding: 4px 17px;
 }
 
-.hotel-item-info a:first-of-type {
+.btn-item-info a:first-of-type {
   background-color: #81b3d2;
-  margin-right: 4px;
+  margin-right: 2px;
 }
 
-.hotel-item-info a:first-of-type:hover,
-.hotel-item-info a:first-of-type:focus {
+.btn-item-info a:first-of-type:hover,
+.btn-item-info a:first-of-type:focus {
   background-color: #669ec0;
 }
 
-.hotel-item-info a:first-of-type:active {
+.btn-item-info a:first-of-type:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
 
-.hotel-item-info a:last-of-type {
+.btn-item-info a:last-of-type {
   background-color: #766357;
 }
 
-.hotel-item-info a:last-of-type:hover,
-.hotel-item-info a:last-of-type:focus {
+.btn-item-info a:last-of-type:hover,
+.btn-item-info a:last-of-type:focus {
   background-color: #604e43;
 }
 
-.hotel-item-info a:last-of-type:active {
+.btn-item-info a:last-of-type:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
@@ -1058,15 +1078,15 @@ img {
   display: flex;
   position: relative;
   align-items: flex-end;
-  min-height: 75px;
+  min-height: 85px;
   margin-left: auto;
 }
 
-.hotel-item-rate span {
+.range {
   line-height: 21px;
   font-weight: 400;
   color: #666666;
-  padding: 5px 14px;
+  padding: 4px 14px;
   background-color: #f2f2f2;
 }
 
@@ -1077,7 +1097,7 @@ img {
   margin: 0;
   min-width: 120px;
   height: 20px;
-  top: -15px;
+  top: -10px;
   left: -10px;
   list-style: none;
   flex-direction: row-reverse;
