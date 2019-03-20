@@ -20,15 +20,7 @@ try {
 
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  /*if (searchHotelForm.classList.contains("search-hotels-show")) {
-    searchHotelForm.classList.remove("search-hotels-show");
-    searchHotelForm.classList.remove("search-hotels-error");
-  } else {
-    searchHotelForm.classList.add("search-hotels-show");
-  }*/
-
   searchHotelForm.classList.toggle("search-hotels-show");
-
 });
 
 buttonSubmit.addEventListener("click", function (evt) {
