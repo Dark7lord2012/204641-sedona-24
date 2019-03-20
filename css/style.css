@@ -731,6 +731,18 @@ img {
   background: url(../img/checkbox.svg) no-repeat 50% 50%;
 }
 
+.checkbox:disabled:checked ~ .filters-check::before {
+  width: 27px;
+  height: 23px;
+  background: url(../img/checkbox-disabled.svg) no-repeat 50% 50%;
+}
+
+.checkbox:disabled ~ .filters-check::before {
+  width: 23px;
+  height: 23px;
+  background: url(../img/checkbox-off-disabled.svg) no-repeat 50% 50%;
+}
+
 /* Сложный фильтр, нагло спертый с демонстрации */
 
 .filters-price-per-day {
