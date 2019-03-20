@@ -766,6 +766,10 @@ img {
   background: url(../img/checkbox-off-disabled.svg) no-repeat 50% 50%;
 }
 
+.checkbox:focus ~ .filters-check::before {
+  outline: 2px solid #81b3d2;
+}
+
 /* Сложный фильтр, нагло спертый с демонстрации */
 
 .filters-price-per-day {
