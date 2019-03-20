@@ -9,6 +9,8 @@ var buttonSubmit = formSearchHotels.querySelector(".button-submit");
 var isStorageSupport = true;
 var storage = "";
 
+searchHotelForm.classList.remove("search-hotels-show");
+
 try {
   storage = localStorage.getItem("dataArrival");
   storage = localStorage.getItem("dataDeparture");
