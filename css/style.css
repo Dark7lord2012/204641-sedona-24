@@ -114,8 +114,10 @@ img {
 /* Контейнер */
 
 .container {
+  display: block;
   margin: 0 auto;
   width: 1200px;
+  padding: 0 20px;
   background-color: #ffffff;
   box-shadow:
     5px 0px 15px -3px #dadada,
@@ -456,13 +458,13 @@ img {
 }
 
 .calendar-btn {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 60px;
+  position: relative;
+  margin-left: -25px;
+  top: 2px;
+  right: 6px;
   width: 30px;
   height: 30px;
+  z-index: 2;
 }
 
 .calendar-btn path,
@@ -603,6 +605,11 @@ img {
 }
 
 /* Футер */
+
+.main-footer{
+  display: flex;
+  flex-basis: 1200px;
+}
 
 .main-footer .container {
   display: flex;
