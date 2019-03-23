@@ -79,25 +79,26 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-left: 71px;
 }
 
 .site-navigation:first-of-type li {
-  margin-right: 7px;
+  margin-right: 147px;
 }
 
 .site-navigation:last-of-type {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-left: auto;
+  margin-right: 72px;
 }
 
 .site-navigation:last-of-type li {
-  margin-left: 28px;
+  margin-left: 165px;
 }
 
 .site-navigation li {
-  padding: 15px 70px;
+  padding: 15px 0px;
 }
 
 .site-navigation a {
