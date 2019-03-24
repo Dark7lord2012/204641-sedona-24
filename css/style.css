@@ -41,6 +41,7 @@ img {
 .main-nav {
   position: relative;
   margin: 0;
+  padding: 0 71px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,7 +68,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 530px;
+  width: 45.75%;
   list-style: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -79,26 +80,24 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-left: 71px;
 }
 
 .site-navigation:first-of-type li {
-  margin-right: 147px;
+  text-align: left;
+
 }
 
 .site-navigation:last-of-type {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 72px;
+
 }
 
 .site-navigation:last-of-type li {
-  margin-left: 165px;
+  text-align: right;
 }
 
 .site-navigation li {
   padding: 15px 0px;
+  width: 50%;
 }
 
 .site-navigation a {
